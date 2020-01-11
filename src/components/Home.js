@@ -1,17 +1,17 @@
-// src/components/NavBar.js
+// // src/components/NavBar.js
 
-import React from "react";
-import {Link} from "react-router-dom";
+// import React from "react";
+// import {Link} from "react-router-dom";
 
-const Home = () => {
+// const Home = () => {
 
-  return (
-    <div>
-      <span>
-        <Link to="/profile">Start</Link>
-      </span>
-    </div>
-  );
-};
+//   return (
+//     <div>
+//       <span>
+//         <Link to="/profile">Start</Link>
+//       </span>
+//     </div>
+//   );
+// };
 
-export default Home;
+// export default Home;

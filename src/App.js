@@ -8,7 +8,7 @@ import { Router, Route, Switch } from "react-router-dom";
 import Profile from "./components/Profile";
 import history from "./utils/history";
 import PrivateRoute from "./components/PrivateRoute";
-import IntitalRoute from "./components/Home";
+// import IntitalRoute from "./components/Home";
 
 
 function App() {
@@ -20,7 +20,7 @@ function App() {
           <NavBar />
         </header>
         <Switch>
-          <Route path="/" exact component={IntitalRoute}/>
+          {/* <Route path="/" exact component={IntitalRoute}/> */}
           <PrivateRoute path="/profile" component={Profile} />
 
         </Switch>
