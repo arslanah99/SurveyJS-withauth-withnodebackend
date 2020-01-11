@@ -19,7 +19,7 @@ function App() {
           <NavBar />
         </header>
         <Switch>
-          <Route path="/surveyEx" component={SurveyEx}/>
+          <PrivateRoute path="/surveyEx" component={SurveyEx}/>
           {/* <Route path="/profile" component={Profile} /> */}
           <PrivateRoute path="/profile" component={Profile} />
 
