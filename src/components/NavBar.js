@@ -11,13 +11,13 @@ const NavBar = () => {
       {/* {!isAuthenticated && (
         <button onClick={() => loginWithRedirect({})}>Log in</button>
       )}
-
       {isAuthenticated && <button onClick={() => logout()}>Log out</button>} */}
       {isAuthenticated && (
           <button onClick={() => logout({})}>Logout</button>
       )}
        {isAuthenticated && (
       <span>
+        <Link to="/SurveyEx">Survey</Link>&nbsp;
         <Link to="/profile">Profile</Link>
       </span>
     )}
@@ -25,4 +25,4 @@ const NavBar = () => {
   );
 };
 
-export default NavBar;
+export default NavBar; 

@@ -1,4 +1,3 @@
-// src/App.js
 
 import React from "react";
 import NavBar from "./components/NavBar";
@@ -8,7 +7,7 @@ import { Router, Route, Switch } from "react-router-dom";
 import Profile from "./components/Profile";
 import history from "./utils/history";
 import PrivateRoute from "./components/PrivateRoute";
-// import IntitalRoute from "./components/Home";
+import SurveyEx from "./components/SurveyEx";
 
 
 function App() {
@@ -20,7 +19,8 @@ function App() {
           <NavBar />
         </header>
         <Switch>
-          {/* <Route path="/" exact component={IntitalRoute}/> */}
+          <Route path="/surveyEx" component={SurveyEx}/>
+          {/* <Route path="/profile" component={Profile} /> */}
           <PrivateRoute path="/profile" component={Profile} />
 
         </Switch>
@@ -29,4 +29,4 @@ function App() {
   );
 }
 
-export default App;
+export default App; 
