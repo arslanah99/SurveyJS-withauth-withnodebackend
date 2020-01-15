@@ -2,8 +2,17 @@
 import React from "react";
 import * as Survey from "survey-react";
 import "survey-react/survey.css";
+import axios from 'axios';
+import { useAuth0 } from "../react-auth0-spa";
+
 
 const SurveyEx = () => {
+  const { loading, user } = useAuth0();
+
+  
+    localStorage.setItem('userEmail', user.email)
+    // console.log(userEmail)
+
   var surveyJSON = {
     pages: [
       {
@@ -29,9 +38,18 @@ const SurveyEx = () => {
     ]
   };
 
-  function sendDataToServer(survey) {
-    //send Ajax request to your web server.
-    alert("The results are:" + JSON.stringify(survey.data));
+
+  const sendDataToServer = (survey) => {
+    axios.post('http://localhost:5000/doasurvey', {
+      data: JSON.stringify(survey.data),
+      email: user.email
+    })
+    .then(function (response) {
+      console.log(response);
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
   }
 
   return (

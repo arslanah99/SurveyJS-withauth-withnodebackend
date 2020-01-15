@@ -8,17 +8,14 @@ const NavBar = () => {
 
   return (
     <div>
-      {/* {!isAuthenticated && (
-        <button onClick={() => loginWithRedirect({})}>Log in</button>
-      )}
-      {isAuthenticated && <button onClick={() => logout()}>Log out</button>} */}
       {isAuthenticated && (
-          <button onClick={() => logout({})}>Logout</button>
+          <button onClick={() => {logout({}); localStorage.clear()}}>Logout</button>
       )}
        {isAuthenticated && (
       <span>
         <Link to="/SurveyEx">Survey</Link>&nbsp;
         <Link to="/profile">Profile</Link>
+        <Link to="/SurveysDone">Surveys Completed</Link>
       </span>
     )}
     </div>
